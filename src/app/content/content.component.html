@@ -1,0 +1,13 @@
+<ng-template #tpl>
+  <ng-content select="[slot=content]"></ng-content>
+</ng-template>
+
+<ng-container *ngIf="false">
+  false
+  <app-desktop [ref]="tpl"></app-desktop>
+</ng-container>
+
+<ng-container *ngIf="true">
+  true
+  <app-mobile [ref]="tpl"></app-mobile>
+</ng-container>
